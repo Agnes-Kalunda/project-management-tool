@@ -1,0 +1,1 @@
+// Displays the application name and a navigation bar with links to Projects and Account pages
