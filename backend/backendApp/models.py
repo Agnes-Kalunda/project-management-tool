@@ -29,3 +29,8 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
 
 
+class Comment(models.Model):
+    content = models.TextField()
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
